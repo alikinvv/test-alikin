@@ -1,6 +1,6 @@
 "use strict";
 
-fetch('/js/senators.json').then(function (response) {
+fetch('./js/senators.json').then(function (response) {
   return response.json();
 }).then(function (json) {
   return init(json);
@@ -10,7 +10,7 @@ var init = function init(senators) {
   var path = d3.geo.path();
   var d3_map = d3.select('.map').append('svg:svg');
   var states = d3_map.append('svg:g').attr('class', 'states');
-  d3.json('/js/us-states.json', function (collection) {
+  d3.json('./js/us-states.json', function (collection) {
     states.selectAll('path').data(collection.features).enter().append('path').attr('d', path).attr('class', function (state) {
       return state.id;
     }).on('click', function (state) {

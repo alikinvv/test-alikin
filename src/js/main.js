@@ -1,5 +1,5 @@
 
-fetch('/js/senators.json')
+fetch('./js/senators.json')
     .then(response => response.json())
     .then(json => init(json))
 
@@ -8,7 +8,7 @@ let init = senators => {
     let d3_map = d3.select('.map').append('svg:svg');
     let states = d3_map.append('svg:g').attr('class', 'states');
 
-    d3.json('/js/us-states.json', collection => {
+    d3.json('./js/us-states.json', collection => {
         states.selectAll('path')
             .data(collection.features)
             .enter()
