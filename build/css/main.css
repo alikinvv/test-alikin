@@ -1,0 +1,1 @@
+*{box-sizing:border-box}body,html{height:100%}.wrapper{display:flex;height:100%;min-height:700px}.wrapper .map{width:80%}.wrapper .map svg{width:100%;height:100%}.wrapper .info{width:20%}svg{stroke-width:1.8px;stroke:#cfcfcf;fill:#f0f0f0}svg path{transition:all .2s ease-in-out;cursor:pointer}svg path.active{fill:#f74462!important}svg path:hover{fill:#abc0fa}
